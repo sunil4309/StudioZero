@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pikslnet</title>
+  <meta name="description" content="Sunil's Design Portfolio. Playful & Premium futuristic brand systems, UI graphics, and social media designs from the future.">
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Index Page Specific Stylesheet -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- Ambient Space Grid Backdrop -->
+  <div class="bg-grid"></div>
+  <div class="bg-stars"></div>
+  
+  <!-- Glowing Background Orbs -->
+  <div class="glow-orb glow-orb-cyan" style="top: -100px; right: -50px;"></div>
+  <div class="glow-orb glow-orb-blue" style="bottom: 10%; left: -100px;"></div>
+
+  <!-- Header Navigation -->
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="pikslnet Logo">
+      piksl<span>net</span>
+    </a>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="pcspec.html">PC SPECS</a>
+      <a href="music.html">MUSIC</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1 class="glitch-title" data-text="DESIGNS FROM THE FUTURE">DESIGNS FROM THE FUTURE</h1>
+        
+        <!-- Interactive Terminal Typing console -->
+        <div class="terminal-deck">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">system_shell.sh</span>
+          </div>
+          <div class="terminal-body">
+            <p class="console-prompt">> loading_designer_profile.bin...</p>
+            <p class="console-text" id="terminalText"></p>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="portfolio.html" class="cyber-btn">EXPLORE LABS</a>
+          <a href="contact.html" class="cyber-btn cyber-btn-secondary">LAUNCH PROJECT</a>
+        </div>
+
+        <!-- Counting Stats Row -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-num" data-val="120">0</div>
+            <div class="stat-label">PROJECTS COMPLETE</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-val="25">0</div>
+            <div class="stat-label">HAPPY CLIENTS</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-val="5">0</div>
+            <div class="stat-label">RATING (STARS)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities / Services -->
+    <section class="capabilities-section">
+      <div class="section-header">
+        <h2 class="section-title">SYSTEM_CAPABILITIES</h2>
+        <p class="section-subtitle">Calibrated graphics designed to elevate visual interfaces and capture attention.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <!-- Card 1 -->
+        <div class="capability-card">
+          <div class="card-glow"></div>
+          <div class="card-scan-line"></div>
+          <div class="card-top">
+            <span class="card-num">01</span>
+            <span class="card-tag">CREATIVE</span>
+          </div>
+          <h3>Social Media Design</h3>
+          <p>Scroll-stopping post layouts, high-impact carousels, striking reels covers, and premium advertising creatives tailored for clickability.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="capability-card">
+          <div class="card-glow"></div>
+          <div class="card-scan-line"></div>
+          <div class="card-top">
+            <span class="card-num">02</span>
+            <span class="card-tag">SYSTEMS</span>
+          </div>
+          <h3>Branding Frameworks</h3>
+          <p>Custom logos, sleek typography sets, futuristic identity design, and color palettes calculated to ensure absolute brand recall.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="capability-card">
+          <div class="card-glow"></div>
+          <div class="card-scan-line"></div>
+          <div class="card-top">
+            <span class="card-num">03</span>
+            <span class="card-tag">INTERFACE</span>
+          </div>
+          <h3>UI/UX Graphic Art</h3>
+          <p>Bespoke hero landing page illustrations, custom visual assets, dashboards screens, and sleek vector mockups engineered for modern web apps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lab Highlights / Showcase -->
+    <section class="highlight-section">
+      <div class="section-header">
+        <h2 class="section-title">FEATURED_MOCKS</h2>
+        <p class="section-subtitle">A glimpse of the visual art crafted inside our design labs.</p>
+      </div>
+
+      <div class="highlight-grid">
+        <div class="highlight-tile">
+          <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&auto=format&fit=crop&q=70" alt="PC Specs Lab Design">
+          <div class="tile-overlay">
+            <h4>PC SETUP SYSTEM</h4>
+            <p>Futuristic specs cataloging and benchmarking dashboard.</p>
+            <a href="pcspec.html" class="tile-link">VIEW SETUP →</a>
+          </div>
+        </div>
+
+        <div class="highlight-tile">
+          <img src="https://images.unsplash.com/photo-1614680376593-902f74fa0d41?w=600&auto=format&fit=crop&q=70" alt="Music Player Interface">
+          <div class="tile-overlay">
+            <h4>AUDIO DECK INTERFACE</h4>
+            <p>Glowing responsive web audio engine dashboard.</p>
+            <a href="music.html" class="tile-link">PLAY SOUNDS →</a>
+          </div>
+        </div>
+
+        <div class="highlight-tile">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=70" alt="Designer Portfolio Gallery">
+          <div class="tile-overlay">
+            <h4>DESIGN LABS</h4>
+            <p>Explore the complete vault of high fidelity assets.</p>
+            <a href="portfolio.html" class="tile-link">LAUNCH VAULT →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> pikslnet &nbsp;•&nbsp; Crafted in electric blue <span class="tech-highlight">[SYSTEM v2.0]</span></p>
+  </footer>
+
+  <!-- Script Declarations -->
+  <script src="js/global.js" defer></script>
+  <script src="js/index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Station</title>
+  <meta name="description" content="Sunil's music player. Play playlist tracks, control volume, view cover arts, and interact with the beat visualizer.">
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Music Page Specific Stylesheet -->
+  <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+  <!-- Ambient Space Grid Backdrop -->
+  <div class="bg-grid"></div>
+  <div class="bg-stars"></div>
+  
+  <!-- Glowing Background Orbs -->
+  <div class="glow-orb glow-orb-cyan" style="bottom: 10%; right: -50px;"></div>
+  <div class="glow-orb glow-orb-blue" style="top: 15%; left: -100px;"></div>
+
+  <!-- Header Navigation -->
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="pikslnet Logo">
+      piksl<span>net</span>
+    </a>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="pcspec.html">PC SPECS</a>
+      <a href="music.html" class="active">MUSIC</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="music-page-layout">
+    <section class="music-hero">
+      <h1 class="glitch-title" data-text="SOUND DECK">SOUND DECK</h1>
+      <p class="intro-sub">Tune in to the sonic loops driving my design workflow sessions.</p>
+    </section>
+
+    <!-- Music Player Workspace -->
+    <section class="player-container">
+      <!-- Left Side: Deck Shell -->
+      <div class="player-deck">
+        <div class="deck-top">
+          <div class="deck-status-dot"></div>
+          <span class="deck-logo">SYSTEM_AUDIO_v2.0</span>
+        </div>
+
+        <div class="album-art-wrap">
+          <div class="vinyl-record" id="vinylRecord">
+            <img id="albumCover" src="https://images.unsplash.com/photo-1614680376593-902f74fa0d41?w=400&auto=format&fit=crop&q=70" alt="Album Art">
+            <div class="vinyl-center"></div>
+          </div>
+        </div>
+
+        <div class="track-info">
+          <h2 id="trackTitle">Nanchaku</h2>
+          <p id="trackArtist">Seedhe Maut</p>
+        </div>
+
+        <!-- Interactive Beat Visualizer -->
+        <div class="audio-visualizer" id="visualizer">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <!-- Timeline Progress Slider -->
+        <div class="progress-wrap">
+          <span id="currentTime" class="time-stamp">0:00</span>
+          <div class="slider-container">
+            <input type="range" id="seekBar" class="seek-bar" value="0" min="0" max="100">
+            <div class="slider-progress" id="seekProgress"></div>
+          </div>
+          <span id="duration" class="time-stamp">0:00</span>
+        </div>
+
+        <!-- Controls Console -->
+        <div class="controls-console">
+          <button id="prev" class="control-btn" aria-label="Previous Track">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6L18 6v12z"/></svg>
+          </button>
+          <button id="playPause" class="control-btn play-btn" aria-label="Play or Pause">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button id="next" class="control-btn" aria-label="Next Track">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 18V6l8.5 6zm9-12h2v12h-2z"/></svg>
+          </button>
+        </div>
+
+        <!-- Volume Controller -->
+        <div class="volume-console">
+          <span class="vol-icon" id="volIcon">🔊</span>
+          <div class="slider-container volume-slider-container">
+            <input type="range" id="volumeBar" class="volume-bar" value="0.8" min="0" max="1" step="0.05">
+            <div class="slider-progress" id="volumeProgress"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Interactive Playlist -->
+      <div class="playlist-deck">
+        <div class="playlist-header">
+          <h3>SONIC_VAULT_TRACKS</h3>
+          <span class="track-count" id="trackCount">10 TRACKS</span>
+        </div>
+        <!-- Playlist Filters -->
+        <div class="playlist-filters">
+          <button class="playlist-filter-btn active" data-playlist="all">ALL</button>
+          <button class="playlist-filter-btn" data-playlist="hiphop">RAP</button>
+          <button class="playlist-filter-btn" data-playlist="lofi">LO-FI</button>
+          <button class="playlist-filter-btn" data-playlist="bollywood">INDIE</button>
+        </div>
+        <ul id="playlist" class="playlist">
+          <!-- Populated dynamically via js/tracks.js and js/music.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Hidden HTML5 Audio Element -->
+    <audio id="audioPlayer"></audio>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> pikslnet &nbsp;•&nbsp; Crafted in electric blue <span class="tech-highlight">[SYSTEM v2.0]</span></p>
+  </footer>
+
+  <!-- Script Declarations -->
+  <script src="js/global.js" defer></script>
+  <script src="js/tracks.js" defer></script>
+  <script src="js/music.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Vault</title>
+  <meta name="description" content="Sunil's Design Gallery. Cyberpunk branding, stream package designs, UI dashboards, and esports team jerseys.">
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Portfolio Page Specific Stylesheet -->
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+  <!-- Ambient Space Grid Backdrop -->
+  <div class="bg-grid"></div>
+  <div class="bg-stars"></div>
+  
+  <!-- Glowing Background Orbs -->
+  <div class="glow-orb glow-orb-cyan" style="top: 15%; left: -100px;"></div>
+  <div class="glow-orb glow-orb-blue" style="bottom: 10%; right: -50px;"></div>
+
+  <!-- Header Navigation -->
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="pikslnet Logo">
+      piksl<span>net</span>
+    </a>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html" class="active">PORTFOLIO</a>
+      <a href="pcspec.html">PC SPECS</a>
+      <a href="music.html">MUSIC</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+      <div class="hero-text-wrap">
+        <h1 class="glitch-title" data-text="PORTFOLIO VAULT">PORTFOLIO VAULT</h1>
+        <p class="intro-sub">A curated catalog of branding, social graphics, and custom user interfaces.</p>
+      </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="filter-section">
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">ALL SHARDS</button>
+        <button class="filter-btn" data-filter="branding">BRANDING</button>
+        <button class="filter-btn" data-filter="social">SOCIAL MEDIA</button>
+        <button class="filter-btn" data-filter="ui">UI/UX ART</button>
+        <button class="filter-btn" data-filter="gaming">GAMING ART</button>
+      </div>
+    </section>
+
+    <!-- Portfolio Masonry Grid -->
+    <section class="gallery-section">
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Populated dynamically via js/projects.js and js/portfolio.js -->
+      </div>
+    </section>
+
+    <!-- Glassmorphic Lightbox Preview Overlay -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <div class="lightbox-content">
+        <div class="lightbox-img-wrap">
+          <img src="" alt="Lightbox Preview" id="lightboxImg">
+        </div>
+        <div class="lightbox-details">
+          <h2 id="lightboxTitle">Project Title</h2>
+          <span id="lightboxTag" class="item-tag">CATEGORY</span>
+          <p id="lightboxDesc">Detailed technical breakdown of the graphic design. Custom shapes, glowing borders, high-contrast layouts.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> pikslnet &nbsp;•&nbsp; Crafted in electric blue <span class="tech-highlight">[SYSTEM v2.0]</span></p>
+  </footer>
+
+  <!-- Script Declarations -->
+  <script src="js/global.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+</body>
+</html>

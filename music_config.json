@@ -1,0 +1,62 @@
+{
+  "Kodak .mp3": {
+    "title": "Kodak",
+    "artist": "King, Seedhe Maut",
+    "playlist": "hiphop",
+    "cover": "images/kodak-Seedhe Maut.png"
+  },
+  "Madira.mp3": {
+    "title": "Madira",
+    "artist": "Seedhe Maut",
+    "playlist": "hiphop",
+    "cover": "images/Madira.png"
+  },
+  "Namastute.mp3": {
+    "title": "Namastute",
+    "artist": "Seedhe Maut",
+    "playlist": "hiphop",
+    "cover": "images/Namastute.jpg"
+  },
+  "Nanchaku Seedhe Maut 320 Kbps.mp3": {
+    "title": "Nanchaku",
+    "artist": "Seedhe Maut",
+    "playlist": "hiphop",
+    "cover": "images/Nanchaku-Seedhe-Maut-.png"
+  },
+  "barbaad.mp3": {
+    "title": "Barbaad",
+    "artist": "Jubin Nautiyal",
+    "playlist": "bollywood",
+    "cover": "images/barbaad.png"
+  },
+  "dhun.mp3": {
+    "title": "Dhun",
+    "artist": "Arijit Singh",
+    "playlist": "bollywood",
+    "cover": "images/Dhun.png"
+  },
+  "humsafar.mp3": {
+    "title": "Humsafar",
+    "artist": "Sachet Tandon",
+    "playlist": "lofi",
+    "cover": "images/Humsafar.png"
+  },
+  "l⁬ikhne bethu toh .mp3": {
+    "title": "L⁬ikhne Bethu Toh",
+    "artist": "Independent Artist",
+    "playlist": "lofi",
+    "cover": "images/Tum ho toh.png"
+  },
+  "pardesiya.mp3": {
+    "title": "Pardesiya",
+    "artist": "Sonu Nigam",
+    "playlist": "bollywood",
+    "cover": "images/pardesiya.svj.jpg"
+  },
+  "tum_ho_toh.mp3": {
+    "title": "Tum Ho Toh",
+    "artist": "Vishal Mishra",
+    "playlist": "bollywood",
+    "cover": "images/Tum ho toh.png"
+  }
+}

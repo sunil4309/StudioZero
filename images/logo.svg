@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- Cyan glow gradient -->
+    <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0072ff" />
+    </linearGradient>
+    <!-- Filter for neon glow effect -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background transparent -->
+  
+  <!-- Outer Cyber Diamond Ring -->
+  <polygon points="50,15 85,50 50,85 15,50" fill="none" stroke="url(#cyberGradient)" stroke-width="3" opacity="0.4" />
+  
+  <!-- Inner Bouncing Signal Nodes -->
+  <polygon points="50,25 75,50 50,75 25,50" fill="none" stroke="url(#cyberGradient)" stroke-width="4" filter="url(#neonGlow)" />
+  
+  <!-- Core Data Crystal Node -->
+  <circle cx="50" cy="50" r="10" fill="url(#cyberGradient)" filter="url(#neonGlow)" />
+  
+  <!-- Floating Tech Orbs -->
+  <circle cx="50" cy="15" r="4" fill="#00f0ff" />
+  <circle cx="50" cy="85" r="4" fill="#0072ff" />
+  <circle cx="15" cy="50" r="4" fill="#00f0ff" />
+  <circle cx="85" cy="50" r="4" fill="#0072ff" />
+</svg>

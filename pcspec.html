@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Specifications</title>
+  <meta name="description" content="Sunil's PC setup specs. Ryzen 7 5700X CPU, RTX 4060 GPU, dual monitors, mechanical keyboard, and streaming equipment details.">
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- PC Specs Page Specific Stylesheet -->
+  <link rel="stylesheet" href="css/pcspec.css">
+</head>
+<body>
+  <!-- Ambient Space Grid Backdrop -->
+  <div class="bg-grid"></div>
+  <div class="bg-stars"></div>
+  
+  <!-- Glowing Background Orbs -->
+  <div class="glow-orb glow-orb-cyan" style="top: -100px; right: -50px;"></div>
+  <div class="glow-orb glow-orb-blue" style="bottom: 15%; left: -100px;"></div>
+
+  <!-- Header Navigation -->
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="pikslnet Logo">
+      piksl<span>net</span>
+    </a>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="pcspec.html" class="active">PC SPECS</a>
+      <a href="music.html">MUSIC</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Specs Hero Section -->
+    <section class="pcspec-hero">
+      <div class="hero-text-wrap">
+        <h1 class="glitch-title" data-text="SYSTEM HARDWARE">SYSTEM HARDWARE</h1>
+        <p class="intro-sub">The design, rendering, and gameplay engine driving my creative workflow.</p>
+      </div>
+    </section>
+
+    <!-- Component Category Filters -->
+    <section class="filter-section">
+      <div class="filter-controls">
+        <button class="spec-filter-btn active" data-filter="all">ALL PARTS</button>
+        <button class="spec-filter-btn" data-filter="core">CORE TOWER</button>
+        <button class="spec-filter-btn" data-filter="monitors">DISPLAY</button>
+        <button class="spec-filter-btn" data-filter="peripherals">GEAR & IO</button>
+      </div>
+    </section>
+
+    <!-- Dynamic Specs Card Container -->
+    <section class="specs-section">
+      <div class="specs-grid" id="pcspecList">
+        <!-- Will be populated dynamically via js/pcspec.js -->
+      </div>
+    </section>
+
+    <!-- Glassmorphic Lightbox Preview Overlay -->
+    <div class="lightbox" id="specLightbox">
+      <span class="lightbox-close" id="specLightboxClose">&times;</span>
+      <div class="lightbox-content">
+        <div class="lightbox-img-wrap">
+          <img src="" alt="Component Preview" id="specLightboxImg">
+        </div>
+        <div class="lightbox-details">
+          <h2 id="specLightboxTitle">Component Name</h2>
+          <span id="specLightboxTag" class="item-tag">CORE TOWER</span>
+          <p id="specLightboxDesc">Detailed technical breakdown of the hardware, clock speeds, VRAM, and thermal stats.</p>
+          <div class="spec-lightbox-meta">
+            <div class="spec-lightbox-price-wrapper" style="display: flex; gap: 12px; align-items: center;">
+              <div class="spec-lightbox-price" id="specLightboxPrice">₹ 0.00</div>
+              <button class="spec-bill-btn" id="specLightboxBillBtn" style="display: none;">BILL</button>
+            </div>
+            <a href="#" target="_blank" class="spec-buy-btn" id="specLightboxBuyBtn">
+              <span>BUY PRODUCT</span>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21 12l-8.15-8.15-1.42 1.42 5.43 5.43H5v2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> pikslnet &nbsp;•&nbsp; Crafted in electric blue <span class="tech-highlight">[SYSTEM v2.0]</span></p>
+  </footer>
+
+  <!-- Script Declarations -->
+  <script src="js/global.js" defer></script>
+  <script src="js/pcspec.js" defer></script>
+</body>
+</html>

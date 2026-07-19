@@ -1,0 +1,11 @@
+Place your local audio tracks in this folder.
+Make sure the filenames match the data-local-src attributes in music.html, for example:
+- Nanchaku Seedhe Maut 320 Kbps.mp3
+- barbaad.mp3
+- dhun.mp3
+- pardesiya.mp3
+- humsafar.mp3
+- tum_ho_toh.mp3
+- Kodak .mp3
+- Madira.mp3
+- Namastute.mp3

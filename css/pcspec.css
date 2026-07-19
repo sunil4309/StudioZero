@@ -1,0 +1,573 @@
+/* ==========================================
+   PC SPECS SPECIFIC CSS - SUNIL PORTFOLIO
+   Theme: Sci-fi Technical Details Cards & Progress Bars
+   ========================================== */
+
+/* Hero Section */
+.pcspec-hero {
+  text-align: center;
+  padding: 60px 24px 30px;
+}
+
+/* Category Filter Tabs */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 0 24px;
+}
+
+.filter-controls {
+  background: var(--glass);
+  border: 1px solid rgba(0, 114, 255, 0.15);
+  border-radius: 30px;
+  padding: 6px;
+  display: flex;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.spec-filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-cyber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.spec-filter-btn:hover {
+  color: var(--accent-cyan);
+}
+
+.spec-filter-btn.active {
+  background: var(--accent-blue);
+  color: var(--text-primary);
+  box-shadow: var(--glow-blue);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Specs Grid */
+.specs-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  transition: all var(--transition-normal);
+}
+
+/* Specs Card Styling */
+.pcspec-card {
+  background: var(--glass);
+  border: 1px solid rgba(0, 114, 255, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.pcspec-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+/* Card Glow Laser Line Top */
+.pcspec-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.pcspec-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Image container */
+.pcspec-img {
+  flex: 0 0 140px;
+  height: 140px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  overflow: hidden;
+  background: rgba(9, 14, 36, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.05);
+}
+
+.pcspec-img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 8px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.pcspec-card:hover .pcspec-img img {
+  transform: scale(1.08) translate3d(0, 0, 0);
+}
+
+/* Card Information */
+.pcspec-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0; /* Prevents flex children from stretching past viewport */
+  height: 100%;
+  justify-content: space-between;
+}
+
+.pcspec-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.pcspec-info h3 {
+  font-family: var(--font-cyber);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.pcspec-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Benchmark Progress Bar */
+.spec-benchmark {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.benchmark-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-family: var(--font-cyber);
+  color: var(--accent-cyan);
+  margin-bottom: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.benchmark-track {
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 114, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.benchmark-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+  box-shadow: 0 0 8px var(--accent-cyan);
+  border-radius: 10px;
+  width: 0%; /* Populated dynamically */
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Specs Price Label */
+.pcspec-price {
+  font-family: var(--font-cyber);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 6px;
+  padding: 4px 10px;
+  box-shadow: inset 0 0 6px rgba(0, 240, 255, 0.05);
+}
+
+.spec-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.spec-buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--bg-dark);
+  background: var(--accent-cyan);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-family: var(--font-cyber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: var(--glow-cyan);
+  transition: all var(--transition-fast);
+}
+
+.spec-buy-btn:hover {
+  background: var(--text-primary);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.spec-buy-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.spec-buy-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive Specs Grid */
+@media (max-width: 992px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .pcspec-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 16px;
+  }
+  .pcspec-img {
+    width: 100%;
+    height: 160px;
+    flex: 0 0 160px;
+  }
+}
+
+/* ==========================================
+   PC SPECS LIGHTBOX SPECIFICS
+   ========================================== */
+.spec-lightbox-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.spec-lightbox-price {
+  font-family: var(--font-cyber);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 8px;
+  padding: 6px 14px;
+  box-shadow: inset 0 0 8px rgba(0, 240, 255, 0.05);
+}
+
+.spec-lightbox-meta .spec-buy-btn {
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
+  box-shadow: var(--glow-cyan);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.spec-lightbox-meta .spec-buy-btn:hover {
+  background: var(--text-primary);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================
+   ARCHIVED COMPONENT STATES
+   ========================================== */
+.pcspec-card.archived {
+  border-color: rgba(255, 46, 99, 0.2) !important;
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.5) 0%, rgba(255, 46, 99, 0.02) 100%) !important;
+}
+
+.pcspec-card.archived:hover {
+  border-color: #ff2e63 !important;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.15) !important;
+}
+
+.pcspec-card.archived .pcspec-img img {
+  filter: grayscale(0.5) brightness(0.7);
+}
+
+.archived-badge {
+  background: rgba(255, 46, 99, 0.15);
+  border: 1px solid rgba(255, 46, 99, 0.4);
+  color: #ff2e63;
+  font-family: var(--font-cyber);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-shadow: 0 0 6px rgba(255, 46, 99, 0.5);
+  box-shadow: 0 0 10px rgba(255, 46, 99, 0.15);
+  white-space: nowrap;
+  align-self: center;
+}
+/* Style top hover laser line to match archived red theme */
+.pcspec-card.archived::before {
+  background: linear-gradient(90deg, transparent, #ff2e63, transparent) !important;
+}
+
+/* Style inner image box to match archived red theme */
+.pcspec-card.archived .pcspec-img {
+  border-color: rgba(255, 46, 99, 0.45) !important;
+  box-shadow: inset 0 0 10px rgba(255, 46, 99, 0.15) !important;
+}
+
+/* Style buy button in red warnings theme */
+.pcspec-card.archived .spec-buy-btn,
+.spec-buy-btn.archived-btn {
+  background: #ff2e63 !important;
+  color: var(--bg-dark) !important;
+  box-shadow: 0 0 12px rgba(255, 46, 99, 0.4) !important;
+  pointer-events: auto !important;
+}
+
+.pcspec-card.archived .spec-buy-btn:hover,
+.spec-buy-btn.archived-btn:hover {
+  background: var(--text-primary) !important;
+  color: var(--bg-dark) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.45) !important;
+}
+
+.pcspec-card.archived .spec-buy-btn span,
+.spec-buy-btn.archived-btn span {
+  color: var(--bg-dark) !important;
+}
+
+.pcspec-card.archived .spec-buy-btn:hover span,
+.spec-buy-btn.archived-btn:hover span {
+  color: var(--bg-dark) !important;
+}
+
+/* Styled tag for lightbox when item is archived */
+.item-tag.archived-tag {
+  color: #ff2e63 !important;
+  background: rgba(255, 46, 99, 0.1) !important;
+  border-color: rgba(255, 46, 99, 0.25) !important;
+  text-shadow: 0 0 6px rgba(255, 46, 99, 0.4);
+}
+
+/* ==========================================
+   SECURE PINCODE BILL MODAL
+   ========================================== */
+.spec-bill-btn {
+  background: rgba(0, 240, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  color: var(--accent-cyan);
+  font-family: var(--font-cyber);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.05);
+}
+
+.spec-bill-btn:hover {
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
+  box-shadow: var(--glow-cyan);
+  border-color: var(--accent-cyan);
+}
+
+/* Modal Overlay */
+.pin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.pin-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal Content Card */
+.pin-modal-content {
+  background: rgba(9, 14, 36, 0.95);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pin-modal-overlay.active .pin-modal-content {
+  transform: scale(1);
+}
+
+.pin-modal-header {
+  padding: 16px 20px;
+  background: rgba(0, 240, 255, 0.03);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pin-modal-header h4 {
+  font-family: var(--font-cyber);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: var(--accent-cyan);
+  margin: 0;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+.pin-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.pin-close-btn:hover {
+  color: var(--text-primary);
+}
+
+.pin-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pin-instruction {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.pin-input-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.pin-digit {
+  width: 50px;
+  height: 50px;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  font-family: var(--font-cyber);
+  transition: all var(--transition-fast);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pin-digit:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pin-error-msg {
+  font-family: var(--font-cyber);
+  font-size: 0.75rem;
+  color: #ff2e63;
+  margin-bottom: 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  text-shadow: 0 0 6px rgba(255, 46, 99, 0.3);
+}
+
+.pin-error-msg.active {
+  opacity: 1;
+}
+
+.pin-submit-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-family: var(--font-cyber);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.05);
+}
+
+.pin-submit-btn:hover {
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
+  box-shadow: var(--glow-cyan);
+}

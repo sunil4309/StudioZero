@@ -1,0 +1,378 @@
+/* ==========================================
+   CONTACT SPECIFIC CSS - SUNIL PORTFOLIO
+   Theme: Interactive Form Console & Glow Tiles
+   ========================================== */
+
+/* Page layout */
+.contact-page-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-workspace {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Left Column: Info Terminal */
+.info-terminal {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-block {
+  background: var(--glass);
+  border: 1px solid rgba(0, 114, 255, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.info-block h3 {
+  font-family: var(--font-cyber);
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  color: var(--accent-cyan);
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.info-block p {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.info-link {
+  color: var(--accent-indigo);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.info-link:hover {
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+/* Services Checklist */
+.services-list {
+  list-style: none;
+}
+
+.services-list li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.services-list li span {
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+/* Social Grid Connection Tiles */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.social-tile {
+  background: rgba(2, 6, 23, 0.4);
+  border: 1px solid rgba(0, 114, 255, 0.12);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  transition: all var(--transition-fast);
+}
+
+/* Hover states for the inline SVGs inside tiles */
+.social-tile.twitter-tile:hover .social-icon svg {
+  filter: drop-shadow(0 0 5px rgba(29, 161, 242, 0.45));
+}
+
+.social-tile.instagram-tile:hover .social-icon svg {
+  filter: drop-shadow(0 0 5px rgba(225, 48, 108, 0.45));
+}
+
+.social-tile.github-tile:hover .social-icon svg {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.45));
+}
+
+.social-tile.discord-tile:hover .social-icon svg {
+  filter: drop-shadow(0 0 5px rgba(88, 101, 246, 0.45));
+}
+
+.social-name {
+  font-family: var(--font-cyber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effects for specific channels */
+.social-tile.twitter-tile:hover {
+  border-color: #1da1f2;
+  color: #1da1f2;
+  box-shadow: 0 0 12px rgba(29, 161, 242, 0.35);
+  transform: translateY(-2px);
+}
+
+.social-tile.instagram-tile:hover {
+  border-color: #e1306c;
+  color: #e1306c;
+  box-shadow: 0 0 12px rgba(225, 48, 108, 0.35);
+  transform: translateY(-2px);
+}
+
+.social-tile.github-tile:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.social-tile.discord-tile:hover {
+  border-color: #5865f2;
+  color: #5865f2;
+  box-shadow: 0 0 12px rgba(88, 101, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Right Column: Form Terminal window styling */
+.form-terminal {
+  background: var(--glass);
+  border: 1px solid rgba(0, 114, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.form-bar {
+  background: rgba(2, 6, 23, 0.8);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 114, 255, 0.08);
+}
+
+.form-terminal-title {
+  color: var(--text-muted);
+  font-family: var(--font-cyber);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.form-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.form-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#contactForm {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Input Fields & Floating Labels */
+.input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrap input,
+.input-wrap textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(2, 6, 23, 0.5);
+  border: 1px solid rgba(0, 114, 255, 0.15);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.input-wrap textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.input-wrap label {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: var(--text-muted);
+  font-family: var(--font-cyber);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+  pointer-events: none;
+}
+
+/* Floating behavior */
+.input-wrap input:focus ~ label,
+.input-wrap input:not(:placeholder-shown) ~ label,
+.input-wrap textarea:focus ~ label,
+.input-wrap textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.65rem;
+  color: var(--accent-cyan);
+  background: var(--bg-dark);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.input-wrap input:focus,
+.input-wrap textarea:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
+}
+
+/* Form submission button */
+.submission-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.9rem;
+}
+
+/* Success Feedback Dialog */
+.success-hud {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.success-hud.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hud-content {
+  background: rgba(9, 14, 36, 0.9);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(0, 240, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform var(--transition-normal);
+}
+
+.success-hud.active .hud-content {
+  transform: scale(1);
+}
+
+.hud-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid #10b981;
+  color: #10b981;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.hud-content h2 {
+  font-family: var(--font-cyber);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.hud-content p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.hud-content .cyber-btn {
+  width: 100%;
+}
+
+/* Responsive workspace grid */
+@media (max-width: 992px) {
+  .contact-workspace {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-page-layout {
+    padding: 40px 16px 60px;
+  }
+  #contactForm {
+    padding: 20px;
+    gap: 20px;
+  }
+  .contact-info-deck {
+    padding: 24px;
+  }
+  .info-title {
+    font-size: 1.2rem;
+  }
+}
